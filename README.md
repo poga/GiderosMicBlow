@@ -2,5 +2,16 @@
 
 Based on Caroline's work at http://www.giderosmobile.com/forum/discussion/comment/4048
 
-I don't have many experiences in ios development and lua-C bridge.
-Bugs and memory leaks might exist.
+# Usage
+
+    require 'micblow'
+
+    micblow:addEventListener("MicrophoneBlow", function(timer) 
+        print(Global.blowScene, os.date(), "Mic Blow detected")
+    end)
+
+    # Start micblow detection
+    micblow.startTimerAndRecorder()
+
+    # Stop micblow detection
+    micblow.stopTimerAndRecorder()
