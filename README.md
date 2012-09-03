@@ -1,8 +1,9 @@
-# A gideros mobile plugin for iphone player
+# A gideros mobile plugin for microphone blowing detection
 
-Based on Caroline's work at http://www.giderosmobile.com/forum/discussion/comment/4048
 
-# Usage
+## Usage
+
+### iOS
 
     require 'micblow'
 
@@ -15,3 +16,21 @@ Based on Caroline's work at http://www.giderosmobile.com/forum/discussion/commen
 
     # Stop micblow detection
     micblow.stopTimerAndRecorder()
+    
+### Android
+
+	# Get average background volume
+    self.sampleTimer = CBlowDetectTimer:new()
+    self.sampleTimer:startSampleBackgroundVolume()
+    # … wait a little
+    self.sampleTimer:stopSampleBackgroundVolume()
+    
+    # Register event for blowing detection
+    self.blowDetectTimer:addEventListener(Global.event.micblowDetected, self.onMicblowDetected, self)
+
+
+
+
+## Thanks
+
+iOS version is based on Caroline's work at http://www.giderosmobile.com/forum/discussion/comment/4048
