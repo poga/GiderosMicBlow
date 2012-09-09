@@ -34,3 +34,5 @@
 ## Thanks
 
 iOS version is based on Caroline's work at http://www.giderosmobile.com/forum/discussion/comment/4048
+
+Android AudioMeter: http://www.michaelpardo.com/2012/03/recording-audio-streams/
